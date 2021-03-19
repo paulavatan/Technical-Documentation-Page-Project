@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Technical Documentation Page</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Blinker:wght@300&display=swap" rel="stylesheet">
+    </head>
+    <div id="container">
+        <nav id="navbar">
+            <header><h1>CSS Basics</h1></header>
+            <a class="nav-link" href="#introduction">Introduction</a><br>
+            <a class="nav-link" href="#css_syntax">CSS Syntax</a><br>
+            <a class="nav-link" href="#css_selectors">CSS Selectors</a><br>
+            <a class="nav-link" href="#how_to_add_css">How to add CSS</a><br>
+            <a class="nav-link" href="#css_backgrounds">CSS Backgrounds</a><br>
+            <a class="nav-link" href="#css_text">CSS Text</a><br>
+            <a class="nav-link" href="#reference">Reference</a>
+        </nav>
+    </div>
+    <main id="main-doc">
+        <section class="main-section" id="introduction">
+            <header><h2>Introduction</h2></header>
+            <p>Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML. CSS describes how elements should be rendered on screen, on paper, in speech, or on other media.</p>
+            <p>CSS is among the core languages of the open web and is standardized across Web browsers according to W3C specifications. Previously, development of various parts of CSS specification was done synchronously, which allowed versioning of the latest recommendations. You might have heard about CSS1, CSS2.1, CSS3. However, CSS4 has never become an official version.</p>
+            <p>CSS (Cascading Style Sheets) is used to style and layout web pages — for example, to alter the font, color, size, and spacing of your content, split it into multiple columns, or add animations and other decorative features. This module provides a gentle beginning to your path towards CSS mastery with the basics of how it works, what the syntax looks like, and how you can start using it to add styling to HTML.</p>
+        </section> 
+        <section class="main-section" id="css_syntax">
+            <header><h2>CSS Syntax</h2></header>
+            <p>A CSS rule consists of a selector and a declaration block.</p>
+            <img src="https://www.w3schools.com/css/selector.gif" alt="CSS Syntax">
+            <p>The selector points to the HTML element you want to style.<br>
+               The declaration block contains one or more declarations separated by semicolons.<br>
+               Each declaration includes a CSS property name and a value, separated by a colon.<br>
+               Multiple CSS declarations are separated with semicolons, and declaration blocks are surrounded by curly braces.</p>
+            <p><h4>Example</h4></p> 
+            <p>In this example all "p" elements will be center-aligned, with a red text color:</p>
+            <pre>
+                <code>
+                    p { color: red; text-align: center;}
+                </code>
+            </pre>
+        </section> 
+        <section class="main-section" id="css_selectors">
+            <header><h2>CSS Selectors</h2></header>
+            <p>CSS selectors are used to "find" (or select) the HTML elements you want to style.<br>
+                <ul>
+                    <li><em>The CSS element Selector</em>: The element selector selects HTML elements based on the element name.</li><br>
+                    <li><em>The CSS id Selector</em>:<br>
+                        <ul> 
+                            <li>The id selector uses the id attribute of an HTML element to select a specific element.</li>
+                            <li>The id of an element is unique within a page, so the id selector is used to select one unique element!</li>
+                            <li>To select an element with a specific id, write a hash (#) character, followed by the id of the element.</li>
+                        </ul>    
+                    </li><br>
+                    <li><em>The CSS class Selector</em>: The class selector selects HTML elements with a specific class attribute. To select elements with a specific class, write a period (.) character, followed by the class name.</li><br>
+                    <li><em>The CSS Universal Selector</em>: The universal selector (*) selects all HTML elements on the page.</li><br>
+                    <li><em>The CSS Grouping Selector</em>: The grouping selector selects all the HTML elements with the same style definitions.</li>
+                </ul>
+            </p>
+        </section> 
+        <section class="main-section" id="how_to_add_css">
+            <header><h2>How to add CSS</h2></header>
+            <p><h4>External CSS</h4>
+                With an external style sheet, you can change the look of an entire website by changing just one file!<br>
+                Each HTML page must include a reference to the external style sheet file inside the "link" element, inside the head section.<br>
+                An external style sheet can be written in any text editor, and must be saved with a .css extension.<br>
+            </p>
+            <p><h4>Internal CSS</h4>
+                An internal style sheet may be used if one single HTML page has a unique style.<br>
+                The internal style is defined inside the <em>style element</em>, inside the head section.
+            </p>
+            <p><h4>Inline CSS</h4>
+                An inline style may be used to apply a unique style for a single element.<br>
+                To use inline styles, add the style attribute to the relevant element. The style attribute can contain any CSS property.
+            </p>
+        </section> 
+        <section class="main-section" id="css_backgrounds">
+            <header><h2>CSS Backgrounds</h2></header>
+            <p>The CSS background properties are used to add background effects for elements.</p>
+            <ul>
+                <li>CSS background-color</li><br>
+                <pre>
+                    <code>
+                        body { background-color: lightblue; }
+                    </code>
+                </pre>
+                <li>CSS background-image</li>
+                <pre>
+                    <code>
+                        body { background-image: url("paper.gif"); }
+                    </code>
+                </pre>
+            </ul>
+        </section>
+        <section class="main-section" id="css_text">
+            <header><h2>CSS Text</h2></header>
+            <p>CSS has a lot of properties for formatting text.</p>
+            <h4>Text Color</h4>
+            <pre>
+                <code>
+                    body { color: blue; }
+                    h1 { color: green; }
+                </code>
+            </pre>
+            <h4>Text Alignment</h4>
+            <pre>
+                <code>
+                    h1 { text-align: center; }
+                    h2 { text-align: left; }
+                    h3 { text-align: right; }
+                </code>
+            </pre>
+            <h4>Text Decoration</h4>
+            <p>The text-decoration property is used to set or remove decorations from text.</p>
+            <pre>
+                <code>
+                    a { text-decoration: none; }
+                    h1 { text-decoration: overline; }
+                    h2 { text-decoration: line-through; }
+                    h3 { text-decoration: underline; }  
+                </code>
+            </pre>
+        </section> 
+        <section class="main-section" id="reference">
+            <header><h2>Reference</h2></header>
+            <p>For more detailed information please refer to <a target="_blank" href="https://www.w3schools.com/css/default.asp">W3schools.com</a>.</p>
+        </section> 
+
+    </main>
+</html>   
